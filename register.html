@@ -1,0 +1,71 @@
+<html>
+ <head>
+   <link href="ext.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+<body>
+	
+	<div class="main-agileits">
+		
+		<div class="mainw3-agileinfo form">
+			<div id="login">    
+				<form action="rs" method="get"> 
+
+                                         <div class="field-wrap">
+						
+						<input type="text" name="n" placeholder="Enter Your name"required autocomplete="off"/>
+					</div> 
+                                         
+                                        <div class="field-wrap">
+						
+						<input type="tel" name="ph" placeholder="Enter Your PhoneNumber"required autocomplete="off"/>
+					</div>                                            
+                                        
+
+					<div class="field-wrap">
+						
+						<input type="email" name="e" placeholder="Enter Your Email"required autocomplete="off"/>
+					</div> 
+					<div class="field-wrap">
+						
+						<input type="password" name="p" placeholder="Enter Your Password"required autocomplete="off"/>
+					</div> 
+					<p class="forgot"><a href="index.html">Registered User?</a></p> 
+					<button class="button button-block"/>Create account</button> 
+				</form> 
+			</div>
+         
+		</div>	
+	</div>	
+	
+	
+	<script>
+	$('.form').find('input, textarea').on('keyup blur focus', function (e) { 
+	  var $this = $(this),
+		  label = $this.prev('label');
+
+		  if (e.type === 'keyup') {
+				if ($this.val() === '') {
+			  label.removeClass('active highlight');
+			} else {
+			  label.addClass('active highlight');
+			}
+		} else if (e.type === 'blur') {
+			if( $this.val() === '' ) {
+				label.removeClass('active highlight'); 
+				} else {
+				label.removeClass('highlight');   
+				}   
+		} else if (e.type === 'focus') {
+		  
+		  if( $this.val() === '' ) {
+				label.removeClass('highlight'); 
+				} 
+		  else if( $this.val() !== '' ) {
+				label.addClass('highlight');
+				}
+		}
+ 
+	}); 
+	</script>
+</body>
+</html>
